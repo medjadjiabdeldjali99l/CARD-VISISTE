@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Phone, Globe, MapPin, Briefcase, Award, GraduationCap, ChevronRight, ExternalLink } from 'lucide-react';
+import { Phone, Globe, MapPin, Mail, Briefcase, Award, GraduationCap, ChevronRight, ExternalLink } from 'lucide-react';
 
 const App = () => {
   const containerVariants = {
@@ -28,6 +28,7 @@ const App = () => {
       title: "CEO DELTALOG",
       description: "Solutions innovantes et expertise technologique.",
       websites: ["http://www.deltalog.dz"],
+      email: "said.babaci@deltalog.dz",
       location: "https://maps.app.goo.gl/DekjfFRnX7fBzrxw5",
       isPrimary: true
     },
@@ -35,11 +36,13 @@ const App = () => {
       title: "CEO INKIDIA / Plateforme Moalim",
       description: "Transformation numérique et éducation.",
       websites: ["https://www.inkidia.dz", "https://www.inkidia.com.dz"],
+      email: "contact@inkidia.dz",
     },
     {
       title: "Fondateur – Cluster Excellence Opérationnelle",
       description: "Promotion de la performance industrielle.",
       websites: ["http://www.CEO-DZ.com"],
+      email: "contact@ceo-dz.com",
     }
   ];
 
@@ -95,25 +98,37 @@ const App = () => {
         </section>
 
         {/* Primary Actions */}
-        <section className="grid grid-cols-2 gap-4">
+        <section className="grid grid-cols-1 gap-4">
           <motion.a 
             variants={itemVariants}
             href="tel:0560985514"
-            className="btn-primary flex items-center justify-center gap-2 group shadow-lg shadow-primary/20"
+            className="btn-primary flex items-center justify-center gap-3 group shadow-lg shadow-primary/20"
           >
             <Phone className="w-5 h-5 group-hover:scale-110 transition-transform" />
-            <span>Appeler</span>
+            <span className="font-bold tracking-wide">Appeler</span>
           </motion.a>
-          <motion.a 
-            variants={itemVariants}
-            href="https://maps.app.goo.gl/DekjfFRnX7fBzrxw5"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="btn-secondary flex items-center justify-center gap-2 group ring-1 ring-on-surface/5"
-          >
-            <MapPin className="w-5 h-5 group-hover:scale-110 transition-transform" />
-            <span>Maps</span>
-          </motion.a>
+          
+          <div className="grid grid-cols-2 gap-4">
+            <motion.a 
+              variants={itemVariants}
+              href="https://maps.app.goo.gl/DekjfFRnX7fBzrxw5"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="btn-secondary flex items-center justify-center gap-2 group ring-1 ring-on-surface/5"
+            >
+              <MapPin className="w-5 h-5 group-hover:scale-110 transition-transform text-primary" />
+              <span className="text-sm font-semibold">Localiser</span>
+            </motion.a>
+
+            <motion.a 
+              variants={itemVariants}
+              href="mailto:said.babaci@deltalog.dz"
+              className="btn-secondary flex items-center justify-center gap-2 group ring-1 ring-on-surface/5"
+            >
+              <Mail className="w-5 h-5 group-hover:scale-110 transition-transform text-primary" />
+              <span className="text-sm font-semibold">E-mail</span>
+            </motion.a>
+          </div>
         </section>
 
         {/* Roles & Entities */}
@@ -141,7 +156,16 @@ const App = () => {
                 <p className="text-on-surface-variant text-sm mb-4 leading-relaxed">
                   {role.description}
                 </p>
-                <div className="flex flex-col gap-2">
+                <div className="flex flex-col gap-3">
+                  {role.email && (
+                    <a 
+                      href={`mailto:${role.email}`}
+                      className="inline-flex items-center gap-2 text-on-surface-variant font-medium text-sm hover:text-primary transition-colors"
+                    >
+                      <Mail className="w-4 h-4 text-primary" />
+                      {role.email}
+                    </a>
+                  )}
                   {role.websites.map((url, uidx) => (
                     <a 
                       key={uidx}
@@ -177,6 +201,10 @@ const App = () => {
         <div className="w-[1px] h-6 bg-on-surface/10" />
         <a href="http://www.deltalog.dz" target="_blank" rel="noopener noreferrer" className="p-2 text-on-surface-variant hover:scale-110 transition-transform">
           <Globe className="w-6 h-6" />
+        </a>
+        <div className="w-[1px] h-6 bg-on-surface/10" />
+        <a href="mailto:said.babaci@deltalog.dz" className="p-2 text-on-surface-variant hover:scale-110 transition-transform">
+          <Mail className="w-6 h-6" />
         </a>
         <div className="w-[1px] h-6 bg-on-surface/10" />
         <a href="tel:0560985514" className="p-2 text-on-surface-variant hover:scale-110 transition-transform">
