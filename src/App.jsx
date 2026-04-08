@@ -117,7 +117,7 @@ const App = () => {
         </section>
 
         {/* Roles & Entities */}
-        <section className="space-y-6">
+        <section id="expertise" className="space-y-6">
           <motion.h2 variants={itemVariants} className="text-lg font-manrope font-bold text-on-surface-variant uppercase tracking-widest pl-1">
             Expertise & Direction
           </motion.h2>
@@ -171,17 +171,17 @@ const App = () => {
 
       {/* Floating Bottom Nav */}
       <nav className="fixed bottom-6 left-1/2 -translate-x-1/2 glass-nav rounded-full px-4 py-3 flex items-center gap-8 z-50 ring-1 ring-white/20">
-        <button className="p-2 text-primary hover:scale-110 transition-transform">
+        <a href="#expertise" className="p-2 text-primary hover:scale-110 transition-transform">
           <Briefcase className="w-6 h-6" />
-        </button>
+        </a>
         <div className="w-[1px] h-6 bg-on-surface/10" />
-        <button className="p-2 text-on-surface-variant hover:scale-110 transition-transform">
+        <a href="http://www.deltalog.dz" target="_blank" rel="noopener noreferrer" className="p-2 text-on-surface-variant hover:scale-110 transition-transform">
           <Globe className="w-6 h-6" />
-        </button>
+        </a>
         <div className="w-[1px] h-6 bg-on-surface/10" />
-        <button className="p-2 text-on-surface-variant hover:scale-110 transition-transform">
+        <a href="tel:0560985514" className="p-2 text-on-surface-variant hover:scale-110 transition-transform">
           <Phone className="w-6 h-6" />
-        </button>
+        </a>
       </nav>
     </div>
   );
