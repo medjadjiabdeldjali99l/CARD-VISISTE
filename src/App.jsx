@@ -198,10 +198,10 @@ const App = () => {
         <a href="#expertise" className="p-2 text-primary hover:scale-110 transition-transform">
           <Briefcase className="w-6 h-6" />
         </a>
-        <div className="w-[1px] h-6 bg-on-surface/10" />
+        {/* <div className="w-[1px] h-6 bg-on-surface/10" />
         <a href="http://www.deltalog.dz" target="_blank" rel="noopener noreferrer" className="p-2 text-on-surface-variant hover:scale-110 transition-transform">
           <Globe className="w-6 h-6" />
-        </a>
+        </a> */}
         <div className="w-[1px] h-6 bg-on-surface/10" />
         <a href="mailto:said.babaci@deltalog.dz" className="p-2 text-on-surface-variant hover:scale-110 transition-transform">
           <Mail className="w-6 h-6" />
