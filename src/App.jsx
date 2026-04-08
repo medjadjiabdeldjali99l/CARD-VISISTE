@@ -34,7 +34,7 @@ const App = () => {
     {
       title: "CEO INKIDIA / Plateforme Moalim",
       description: "Transformation numérique et éducation.",
-      websites: ["https://www.inkidia.dz", "https://www.inkidia.com.dz", "https://www.moalim-dz.net"],
+      websites: ["https://www.inkidia.dz", "https://www.inkidia.com.dz"],
     },
     {
       title: "Fondateur – Cluster Excellence Opérationnelle",
@@ -106,7 +106,7 @@ const App = () => {
           </motion.a>
           <motion.a 
             variants={itemVariants}
-            href="https.maps.app.goo.gl/DekjfFRnX7fBzrxw5"
+            href="https://maps.app.goo.gl/DekjfFRnX7fBzrxw5"
             target="_blank"
             rel="noopener noreferrer"
             className="btn-secondary flex items-center justify-center gap-2 group ring-1 ring-on-surface/5"
